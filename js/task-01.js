@@ -6,6 +6,6 @@ console.log(`Numbers of categories: ${listCount}`);
 categoriesList.querySelectorAll('.item').forEach(category => {
     const categoryTitle = category.querySelector('h2').textContent;
     const itemsCount = category.querySelectorAll('li').length;
-    console.log(`Category: ${title}`);
+    console.log(`Category: ${categoryTitle}`);
     console.log(`Elements: ${itemsCount}`);
 });
