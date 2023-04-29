@@ -5,10 +5,8 @@ Escriba un script que reaccione a un cambio en el valor de input#font-size-contr
 <br />
 <span id="text">Abracadabra!</span>*/
 
-const fontSizeControl = document.getElementById('font-size-control');
-const text = document.getElementById('text');
+const fontSizeControl = document.getElementById("font-size-control");
 
-fontSizeControl.addEventListener('input', function() {
-  text.style.fontSize = this.value + 'px';
+fontSizeControl.addEventListener("input", function () {
+  text.style.fontSize = this.value + "px";
 });
-
