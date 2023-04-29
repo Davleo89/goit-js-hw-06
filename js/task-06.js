@@ -24,18 +24,21 @@ Para añadir estilos, use las clases CSS valid e invalid, que ya tenemos añadid
   border-color: #f44336;
 }*/
 
-const input = document.getElementById("validation-input");
+const input = document.querySelector('#validation-input');
 
-inpput.addEventListener("blur", function () {
-  const expectedLength = parseInt(this.getAttribute("data-length"), 10);
-  const actualLength = this.value.length;
+input.addEventListener('blur', validateInput);
 
-  if (actualLength === expectedLength) {
-    this.classList.remove("invalid");
-    this.classList.add("valid");
+function validateInput() {
+  const inputLength = this.getAttribute('data-length');
+  const inputValue = this.value.trim();
+  
+  if (inputValue.length === parseInt(inputLength)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
   } else {
-    this.classList.remove("valid");
-    this.classList.add("invalid");
+    this.classList.remove('valid');
+    this.classList.add('invalid');
   }
-});
+}
+
 
